@@ -1,67 +1,95 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_schemes/src/features/componetization/menu/widget/meu_strip_widget.dart';
+import 'package:flutter_schemes/src/features/componetization/menu/widget/template_control_panel_widget.dart';
 
 import '../../../core/constants/app_images.dart';
-import 'widget/button_menu_widget.dart';
 
-Widget preview(){
+Widget preview() {
   return const MenuPage();
 }
+
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            'PAINEL DE CONTROLE',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
+          TemplateControlPanelWidget(
+            titlePanel: 'PAINEL DE CONTROLE',
+            isTitlePanel: true,
+            isButtonMenu: false,
+            isStrip: false,
           ),
-          SizedBox(
-            height: 36,
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isStrip: true,
+            isButtonMenu: false,
+            stripLabel: 'Meu menu',
           ),
-          MenuStripWidget(
-            label: 'Meu menu',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isStrip: false,
+            isButtonMenu: true,
+            buttonMenuIcon: AppImages.profile,
+            buttonMenuLabel: 'Meu Perfil',
+            buttonMenuRouter: '/my-profile',
           ),
-          ButtonMenuWidget(
-            icon: AppImages.profile,
-            label: 'Meu Perfil',
-            router: '/my-profile',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isButtonMenu: true,
+            isStrip: false,
+            buttonMenuIcon: AppImages.student,
+            buttonMenuLabel: 'Meus Cursos',
+            buttonMenuRouter: '/my-courses',
           ),
-          ButtonMenuWidget(
-            icon: AppImages.student,
-            label: 'Meus Cursos',
-            router: '/my-courses',
+          TemplateControlPanelWidget(
+            stripLabel: 'Minhas informações',
+            isTitlePanel: false,
+            isButtonMenu: false,
+            isStrip: true,
           ),
-          MenuStripWidget(
-            label: 'Minhas informações',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isButtonMenu: true,
+            isStrip: false,
+            buttonMenuIcon: AppImages.heart,
+            buttonMenuLabel: 'Favoritos',
+            buttonMenuRouter: '/favorite',
           ),
-          ButtonMenuWidget(
-            icon: AppImages.heart,
-            label: 'Favoritos',
-            router: '/favorite',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isButtonMenu: true,
+            isStrip: false,
+            buttonMenuIcon: AppImages.download,
+            buttonMenuLabel: 'Certificados',
+            buttonMenuRouter: '/certificate',
           ),
-          MenuStripWidget(
-            label: 'Minhas informações',
+          TemplateControlPanelWidget(
+            stripLabel: 'Preferências',
+            isTitlePanel: false,
+            isButtonMenu: false,
+            isStrip: true,
           ),
-          ButtonMenuWidget(
-            icon: AppImages.info,
-            label: 'Sobre o Sistema',
-            router: '/about-system',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isButtonMenu: true,
+            isStrip: false,
+            buttonMenuIcon: AppImages.info,
+            buttonMenuLabel: 'Sobre o Sistema',
+            buttonMenuRouter: '/about-system',
           ),
-          ButtonMenuWidget(
-            icon: AppImages.userProfile,
-            label: 'Cadastre-se',
-            router: '/register',
+          TemplateControlPanelWidget(
+            isTitlePanel: false,
+            isButtonMenu: true,
+            isStrip: false,
+            buttonMenuIcon: AppImages.userProfile,
+            buttonMenuLabel: 'Cadastre-se',
+            buttonMenuRouter: '/register',
           ),
+         
         ],
       ),
     );

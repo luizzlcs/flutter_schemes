@@ -5,22 +5,27 @@ class HomePage extends StatelessWidget {
     super.key,
   });
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Schemes'),
       ),
-      body:  Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.of(context).pushNamed('/menu-page');
               },
               child: const Text('Componentização - MENU'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/switch');
+              },
+              child: const Text('SwitchListTileExample'),
             )
           ],
         ),

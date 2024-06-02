@@ -7,6 +7,7 @@ import 'package:flutter_schemes/src/features/componetization/pages/register_page
 import 'src/features/componetization/menu/menu_page.dart';
 import 'src/features/componetization/pages/certificate_pager.dart';
 import 'src/features/home/home_page.dart';
+import 'src/features/listTitle/switch_list_tile_example.dart';
 void main() {
   runApp(const FlutterSchemes());
 }
@@ -31,6 +32,7 @@ class FlutterSchemes extends StatelessWidget {
         '/about-system': (context) => const AboutSistemPage(),
         '/register': (context) => const RegisterPager(),
         '/certificate': (context) => const CertificatePager(),
+        '/switch': (context) => const SwitchListTileExample(),
       },
     );
   }

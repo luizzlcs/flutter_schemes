@@ -25,7 +25,7 @@ class FlutterSchemes extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/':(context) => const HomePage(),
-        '/menu-page': (context) => const MenuPage(),
+        '/menu-page': (context) =>  MenuPage(),
         '/my-profile': (context) => const MyProfilePage(),
         '/my-courses': (context) => const MyCoursesPage(),
         '/favorite': (context) => const FavoritePage(),

@@ -18,7 +18,7 @@ class MenuPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           TemplateControlPanelWidget(
-            titlePanel: 'PAINEL DE CONTROLE',
+            titlePanel: 'PAINEL DE CONTROLE PÁGINAS CONTROLADAS',
             isTitlePanel: true,
             isButtonMenu: false,
             isStrip: false,
@@ -89,7 +89,6 @@ class MenuPage extends StatelessWidget {
             buttonMenuLabel: 'Cadastre-se',
             buttonMenuRouter: '/register',
           ),
-         
         ],
       ),
     );

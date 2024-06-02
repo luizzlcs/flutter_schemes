@@ -33,12 +33,37 @@ class TemplateControlPanelWidget extends StatelessWidget {
         Visibility(
           visible: isTitlePanel,
           child: Padding(
-            padding: const EdgeInsets.only(top: 25 ,bottom: 25),
-            child: Text(
-              '$titlePanel',
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            padding:
+                const EdgeInsets.only(top: 25, bottom: 25, left: 8, right: 8),
+            child: FittedBox(
+              fit: BoxFit.contain,
+              child: SelectableText(
+                '$titlePanel',
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                contextMenuBuilder: (context, editableTextState) {
+                  final List<ContextMenuButtonItem> buttonItems =
+                      editableTextState.contextMenuButtonItems;
+
+                  // Remova a opção de cópia
+                  // buttonItems.removeWhere((buttonItem) =>
+                  //     buttonItem.type == ContextMenuButtonType.copy);
+
+                  buttonItems.insert(
+                      0,
+                      ContextMenuButtonItem(
+                          label: 'Enviar e-mail',
+                          onPressed: () {
+                            debugPrint('Enviando e-mail...');
+                          }));
+
+                  return AdaptiveTextSelectionToolbar.buttonItems(
+                    anchors: editableTextState.contextMenuAnchors,
+                    buttonItems: buttonItems,
+                  );
+                },
               ),
             ),
           ),

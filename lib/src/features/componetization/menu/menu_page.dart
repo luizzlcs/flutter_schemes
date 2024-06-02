@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_schemes/src/features/componetization/menu/widget/menu_strings_mixin.dart';
 import 'package:flutter_schemes/src/features/componetization/menu/widget/template_control_panel_widget.dart';
-
 import '../../../core/constants/app_images.dart';
 
 Widget preview() {
-  return const MenuPage();
+  return MenuPage();
 }
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
+class MenuPage extends StatelessWidget with MenuStringsMixin {
+  MenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // const titlePanel = 'PAINEL DE CONTROLE PÁGINAS CONTROLADAS';
     return Scaffold(
       appBar: AppBar(),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           TemplateControlPanelWidget(
-            titlePanel: 'PAINEL DE CONTROLE PÁGINAS CONTROLADAS',
+            titlePanel: titlePanel,
             isTitlePanel: true,
             isButtonMenu: false,
             isStrip: false,
@@ -27,26 +28,26 @@ class MenuPage extends StatelessWidget {
             isTitlePanel: false,
             isStrip: true,
             isButtonMenu: false,
-            stripLabel: 'Meu menu',
+            stripLabel: stripLabelMyMenu,
           ),
           TemplateControlPanelWidget(
             isTitlePanel: false,
             isStrip: false,
             isButtonMenu: true,
             buttonMenuIcon: AppImages.profile,
-            buttonMenuLabel: 'Meu Perfil',
-            buttonMenuRouter: '/my-profile',
+            buttonMenuLabel: buttonMenuLabelMeuPerfil,
+            buttonMenuRouter: buttonMenuRouterMyProfile,
           ),
           TemplateControlPanelWidget(
             isTitlePanel: false,
             isButtonMenu: true,
             isStrip: false,
             buttonMenuIcon: AppImages.student,
-            buttonMenuLabel: 'Meus Cursos',
-            buttonMenuRouter: '/my-courses',
+            buttonMenuLabel: buttonMenuLabelMyCourses,
+            buttonMenuRouter: buttonMenuRouterMyCourses,
           ),
           TemplateControlPanelWidget(
-            stripLabel: 'Minhas informações',
+            stripLabel: stripLabelMyInfo,
             isTitlePanel: false,
             isButtonMenu: false,
             isStrip: true,
@@ -56,10 +57,10 @@ class MenuPage extends StatelessWidget {
             isButtonMenu: true,
             isStrip: false,
             buttonMenuIcon: AppImages.heart,
-            buttonMenuLabel: 'Favoritos',
-            buttonMenuRouter: '/favorite',
+            buttonMenuLabel: buttonMenuLabelFavorite,
+            buttonMenuRouter: buttonMenuRouterFavorite,
           ),
-          TemplateControlPanelWidget(
+          const TemplateControlPanelWidget(
             isTitlePanel: false,
             isButtonMenu: true,
             isStrip: false,
@@ -67,13 +68,13 @@ class MenuPage extends StatelessWidget {
             buttonMenuLabel: 'Certificados',
             buttonMenuRouter: '/certificate',
           ),
-          TemplateControlPanelWidget(
+          const TemplateControlPanelWidget(
             stripLabel: 'Preferências',
             isTitlePanel: false,
             isButtonMenu: false,
             isStrip: true,
           ),
-          TemplateControlPanelWidget(
+          const TemplateControlPanelWidget(
             isTitlePanel: false,
             isButtonMenu: true,
             isStrip: false,
@@ -81,7 +82,7 @@ class MenuPage extends StatelessWidget {
             buttonMenuLabel: 'Sobre o Sistema',
             buttonMenuRouter: '/about-system',
           ),
-          TemplateControlPanelWidget(
+          const TemplateControlPanelWidget(
             isTitlePanel: false,
             isButtonMenu: true,
             isStrip: false,

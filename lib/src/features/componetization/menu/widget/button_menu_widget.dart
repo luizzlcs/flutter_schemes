@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_schemes/src/core/constants/app_images.dart';
+
+import '../../../../core/constants/app_images.dart';
 
 Widget preview() {
   return const ButtonMenuWidget(
@@ -8,7 +9,13 @@ Widget preview() {
     router: '/',
   );
 }
-
+/// Esse Widget gera um botão com parâmetros para receber uma imagem um nome e uma rota nomeada.
+/// 
+/// O [icon] recebe o caminho de uma imagem.
+/// 
+/// O [label] recebe um nome para o botão.
+/// 
+/// A [`router`] recebe uma string de rota nomeada de uma página.
 class ButtonMenuWidget extends StatelessWidget {
   const ButtonMenuWidget({
     super.key,
@@ -16,6 +23,8 @@ class ButtonMenuWidget extends StatelessWidget {
     required this.label,
     this.router,
   });
+
+  /// Recebe um caminho de uma imagem
   final String icon;
   final String label;
   final String? router;
@@ -44,3 +53,4 @@ class ButtonMenuWidget extends StatelessWidget {
     );
   }
 }
+

@@ -7,14 +7,21 @@ final class Gerente extends Funcionario {
     required super.dataAdmissao,
     required super.matricula,
   });
-
+  
   @override
   void calcularImpostoDeRenda() {
     // TODO: implement calcularImpostoDeRenda
   }
-
+  
+  @override
+  void calcularImpostos() {
+    // TODO: implement calcularImpostos
+  }
+  
   @override
   void calcularSalario() {
     // TODO: implement calcularSalario
   }
+
+ 
 }

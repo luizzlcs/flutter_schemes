@@ -1,18 +1,28 @@
+import 'pessoa.dart';
 
-import 'funcionarios.dart';
-abstract class Medicos extends Funcionario {
-  Medicos({
+class Medico extends Pessoa {
+  Medico({
     required super.nome,
     required super.sexo,
-    required super.dataAdmissao,
-    required super.matricula,
     required this.crm,
   });
 
   final String crm;
-  void operar(){
-    print('Faz cirurgia geral');
+
+  @override
+  void calcularImpostos() {
+   
+    print('Calcula imposto');
   }
-  
+}
+
+void main() {
+  Medico medico = Medico(
+    crm: '1552',
+    nome: 'João',
+    sexo: 'M',
+  );
+
+   medico.calcularIdadeEmAnos();
   
 }

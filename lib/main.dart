@@ -37,3 +37,14 @@ class FlutterSchemes extends StatelessWidget {
     );
   }
 }
+
+/// Adicionando comentário
+/// 
+/// Dentro contém um método que retorna o nome de Jesus.
+void firstComment(){
+  print('Jesus Cristo');
+}
+
+void tudoPorEle(){
+  firstComment();
+}

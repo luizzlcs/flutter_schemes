@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'button_menu_widget.dart';
 import 'menu_strip_widget.dart';
 
@@ -75,13 +73,12 @@ class TemplateControlPanelWidget extends StatelessWidget {
           ),
         ),
         Visibility(
-          visible: isButtonMenu,
-          child: ButtonMenuWidget(
-            icon: buttonMenuIcon ?? '',
-            label: buttonMenuLabel ?? '',
-            router: buttonMenuRouter,
-          ),
-        ),
+            visible: isButtonMenu,
+            child: ButtonMenuWidget(
+              icon: buttonMenuIcon ?? '',
+              label: buttonMenuLabel ?? '',
+              router:buttonMenuRouter ?? '' ,
+            )),
       ],
     );
   }

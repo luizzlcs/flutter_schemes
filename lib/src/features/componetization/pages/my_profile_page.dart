@@ -13,15 +13,36 @@ class MyProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Meu perfil'),
+        title: const Text('Botões Personalizados'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            CustomButtonOne.primary(label: 'Botão 1', onPressed: () {}),
-            CustomButtonOne.secondary(label: 'Botão 2', onPressed: () {}),
-            CustomButtonOne.danger(label: 'Botão 3', onPressed: () {}),
+            CustomButtonOne.primary(
+                label: 'Multiplicação',
+                onPressed: () {
+                  const n1 = 8;
+                  const n2 = 6;
+                  int result = n1 * n2;
+                  print('A multiplicação de $n1 e $n2 é: $result');
+                }),
+            CustomButtonOne.secondary(
+                label: 'Adição',
+                onPressed: () {
+                  const n1 = 8;
+                  const n2 = 6;
+                  int result = n1 * n2;
+                  print('A soma de $n1 e $n2 é: $result');
+                }),
+            CustomButtonOne.danger(
+                label: 'Subtração',
+                onPressed: () {
+                  const n1 = 8;
+                  const n2 = 6;
+                  int result = n1 * n2;
+                  print('A Subtração de $n1 e $n2 é: $result');
+                }),
           ],
         ),
       ),

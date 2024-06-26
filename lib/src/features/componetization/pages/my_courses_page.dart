@@ -10,12 +10,12 @@ class MyCoursesPage extends StatelessWidget {
     CustomCard information = const CustomCard.info(
         title: 'Informação', subtitle: 'Cartão de informações');
     CustomCard alert = const CustomCard.alert(
-        title: 'Atenção', subtitle: 'Cartão com conteúdo de atenção');
+        title: 'Atenção', subtitle: 'Mensagem de atenção');
     CustomCard success = const CustomCard.success(
-        title: 'Sucesso', subtitle: 'Cartão com conteúdo de sucesso');
+        title: 'Sucesso', subtitle: 'Mensagem de sucesso');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Meus cursos'),
+        title: const Text('Meus Cards'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32.0),

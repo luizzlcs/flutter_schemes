@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+
 /// Botão customizado para fazer o cálculo de três operações:
 /// Multiplicação, adição e subtração.
-/// 
+///
 /// **Para utilizar faça assim:**
-/// 
+///
 /// ```dart
 ///     CustomButton.multiple(n1: 5, n2: 4) // O resultado da Multiplicação é 20.
 /// ```
 class CustomButton extends StatelessWidget {
+  /// Recebe o nome de uma operação
   final String operation;
+
+  /// Define a cor do botão
   final Color color;
+
+  /// Define o tamanho do título para o botão.
   final double titleSize;
+
+  /// Recebe o resultado da operação feita para dois números.
   final int result;
+
+  /// Esta função imprime um texto.
+  void printText(){
+    print('Imprimir texto');
+  }
 
   // Construtor principal
   const CustomButton({
@@ -22,6 +35,7 @@ class CustomButton extends StatelessWidget {
     required this.result,
   });
 
+  /// Este construtor realização uma multiplicação e coloca a cor do botão em verde limão.
   const CustomButton.multiple({
     super.key,
     this.operation = 'Multiplicação',
@@ -63,7 +77,7 @@ class CustomButton extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: color,
             ),
-            child: Text('Custom Button',
+            child: Text(operation,
                 style: TextStyle(
                   fontSize: titleSize,
                   color: Colors.white,
@@ -76,7 +90,4 @@ class CustomButton extends StatelessWidget {
       ],
     );
   }
-
-@override
-List<Object?> get props => [operation, color, titleSize, result];
 }

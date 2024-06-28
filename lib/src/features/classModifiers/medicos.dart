@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'pessoa.dart';
 
 class Medico extends Pessoa {
@@ -12,7 +14,7 @@ class Medico extends Pessoa {
   @override
   void calcularImpostos() {
    
-    print('Calcula imposto');
+    log('Calcula imposto');
   }
 }
 

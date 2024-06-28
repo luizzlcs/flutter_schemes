@@ -12,7 +12,7 @@ void main() {
   runApp(const FlutterSchemes());
 }
 class FlutterSchemes extends StatelessWidget {
-  const FlutterSchemes({super.key});
+  const   FlutterSchemes({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,7 +42,7 @@ class FlutterSchemes extends StatelessWidget {
 /// 
 /// Dentro contém um método que retorna o nome de Jesus.
 void firstComment(){
-  print('Jesus Cristo');
+  debugPrint('Jesus Cristo');
 }
 
 void tudoPorEle(){

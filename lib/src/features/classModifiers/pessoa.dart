@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 /// Esta é uma classse abstrata que possui dois métodos.
 /// 
 /// > MÉTODOS:
@@ -29,6 +31,6 @@ abstract class Pessoa {
 
   void calcularIdadeEmAnos() {
     //Implemente o método aqui
-    print('Calcular Idade da pessoa');
+    log('Calcular Idade da pessoa');
   }
 }

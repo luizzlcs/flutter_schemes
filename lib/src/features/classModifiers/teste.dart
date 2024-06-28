@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'app_state.dart';
 
 void main() {
@@ -9,13 +11,13 @@ void main() {
   // Verificando o tipo de estado e agindo conforme necessário usando switch
   switch (state) {
     case Loading():
-      print("Carregando...");
+      log("Carregando...");
       break;
     case Loaded(:final data):
-      print("Dados: $data");
+      log("Dados: $data");
       break;
     case Error(:final message):
-      print("Erro: $message");
+      log("Erro: $message");
       break;
   }
 }

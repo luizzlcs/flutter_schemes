@@ -10,17 +10,14 @@ final class Gerente extends Funcionario {
   
   @override
   void calcularImpostoDeRenda() {
-    // TODO: implement calcularImpostoDeRenda
   }
   
   @override
   void calcularImpostos() {
-    // TODO: implement calcularImpostos
   }
   
   @override
   void calcularSalario() {
-    // TODO: implement calcularSalario
   }
 
  

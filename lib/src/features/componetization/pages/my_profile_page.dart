@@ -25,7 +25,7 @@ class MyProfilePage extends StatelessWidget {
                   const n1 = 8;
                   const n2 = 6;
                   int result = n1 * n2;
-                  print('A multiplicação de $n1 e $n2 é: $result');
+                  debugPrint('A multiplicação de $n1 e $n2 é: $result');
                 }),
             CustomButtonOne.secondary(
                 label: 'Adição',
@@ -33,7 +33,7 @@ class MyProfilePage extends StatelessWidget {
                   const n1 = 8;
                   const n2 = 6;
                   int result = n1 * n2;
-                  print('A soma de $n1 e $n2 é: $result');
+                  debugPrint('A soma de $n1 e $n2 é: $result');
                 }),
             CustomButtonOne.danger(
                 label: 'Subtração',
@@ -41,7 +41,7 @@ class MyProfilePage extends StatelessWidget {
                   const n1 = 8;
                   const n2 = 6;
                   int result = n1 * n2;
-                  print('A Subtração de $n1 e $n2 é: $result');
+                  debugPrint('A Subtração de $n1 e $n2 é: $result');
                 }),
           ],
         ),

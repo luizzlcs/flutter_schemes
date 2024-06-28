@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 class Animal {
   Animal({
     required this.nome,
@@ -8,6 +10,6 @@ class Animal {
   String tipoBarulho;
 
   void fazBarulho() {
-    print('O $nome faz o barulho $tipoBarulho!');
+    log('O $nome faz o barulho $tipoBarulho!');
   }
 }

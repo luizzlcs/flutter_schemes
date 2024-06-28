@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// **Para utilizar faça assim:**
 ///
 /// ```dart
-///     CustomButton.multiple(n1: 5, n2: 4) // O resultado da Multiplicação é 20.
+///     CustomButton.multiple(n1: 5, n2: 4); // O resultado da Multiplicação é 20.
 /// ```
 class CustomButton extends StatelessWidget {
   /// Recebe o nome de uma operação
@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
 
   /// Esta função imprime um texto.
   void printText(){
-    print('Imprimir texto');
+    debugPrint('Imprimir texto');
   }
 
   // Construtor principal
@@ -72,7 +72,7 @@ class CustomButton extends StatelessWidget {
           height: 70,
           child: ElevatedButton(
             onPressed: () {
-              print('O resultado da $operation é $result');
+              debugPrint('O resultado da $operation é $result');
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: color,

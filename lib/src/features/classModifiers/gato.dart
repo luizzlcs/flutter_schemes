@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'animal.dart';
 
 class Gato extends Animal {
@@ -8,11 +10,11 @@ class Gato extends Animal {
 
   @override
   void fazBarulho(){
-    print('O gato $nome faz cocô e $tipoBarulho todo santo dia!');
+    log('O gato $nome faz cocô e $tipoBarulho todo santo dia!');
   }
 
   void fazCaca(){
-    print('Só dá trabalho!');
+    log('Só dá trabalho!');
   }
 }
 

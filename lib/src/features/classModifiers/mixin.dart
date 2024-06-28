@@ -1,10 +1,12 @@
+import 'dart:developer';
+
 import 'package:intl/intl.dart';
 
 mixin Logger {
   void log(String message) {
     final now = DateTime.now();
     String formattedDate = DateFormat('dd-MM-yyyy').format(now);
-    print('$formattedDate: $message');
+    log('$formattedDate: $message');
   }
 }
 
@@ -13,7 +15,7 @@ mixin Counter {
 
   void increment() {
     _count++;
-    print('Count is now $_count');
+    log('Count is now $_count');
   }
 
   int get count => _count;

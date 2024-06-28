@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_schemes/src/features/custonCard/custon_card.dart';
 import 'switch_list_tile_widget.dart';
@@ -20,7 +22,7 @@ class _SwitchListTileExampleState extends State<SwitchListTileExample> {
     setState(() {
       toggle = newValue;
     });
-    print('Chamando função $newValue');
+    log('Chamando função $newValue');
   }
 
   @override

@@ -21,12 +21,52 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Componentização - MENU'),
             ),
+            const SizedBox(
+               height: 12,
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/switch');
               },
               child: const Text('SwitchListTileExample'),
-            )
+            ),
+            const SizedBox(
+               height: 12,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/couter');
+              },
+              child: const Text('Contador'),
+            ),
+            const SizedBox(
+               height: 12,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/couter-stateless');
+              },
+              child: const Text('Contador Stateless'),
+            ),
+            
+            const SizedBox(
+               height: 12,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/couter2');
+              },
+              child: const Text('Contador II'),
+            ),
+            const SizedBox(
+               height: 12,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/login');
+              },
+              child: const Text('Login (Get_It)'),
+            ),
           ],
         ),
       ),
